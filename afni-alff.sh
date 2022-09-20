@@ -54,3 +54,4 @@ cd "${out_dir}"
 for f in *.BRIK; do
 	3dAFNItoNIFTI "${f}"
 done
+gzip *.nii
