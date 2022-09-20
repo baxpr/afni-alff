@@ -40,8 +40,8 @@ do
     -prefix rsfc 0.01 0.10 "${fmri_niigz}"
 
 # Normalizing factors
-mean_alff=$(3dmaskave -mask "${mask_niigz}" rsfc_ALFF+tlrc.HEAD | cut -f 1)
-mean_falff=$(3dmaskave -mask "${mask_niigz}" rsfc_fALFF+tlrc.HEAD | cut -f 1)
+mean_alff=$(3dmaskave -mask "${mask_niigz}" rsfc_ALFF+tlrc.HEAD | cut -d ' ' -f 1)
+mean_falff=$(3dmaskave -mask "${mask_niigz}" rsfc_fALFF+tlrc.HEAD | cut -d ' ' -f 1)
 echo Mean ALFF ${mean_alff}
 echo Mean fALFF ${mean_falff}
 
