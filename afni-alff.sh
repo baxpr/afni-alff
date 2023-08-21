@@ -37,7 +37,7 @@ do
 
  # Compute ALFF etc
 3dRSFC -nosat -nodetrend -mask "${mask_niigz}" \
-    -prefix rsfc 0.01 0.10 "${fmri_niigz}"
+    -prefix rsfc "${bplo_hz}" "${bphi_hz}" "${fmri_niigz}"
 
 # Normalizing factors
 mean_alff=$(3dmaskave -mask "${mask_niigz}" rsfc_ALFF+tlrc.HEAD | cut -d ' ' -f 1)
